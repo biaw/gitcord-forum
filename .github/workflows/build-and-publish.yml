@@ -61,16 +61,8 @@ jobs:
       with:
         node-version: "18.x"
 
-    - name: Restore cached modules
-      uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7 # v3
-      id: cache-packages
-      with:
-        path: node_modules
-        key: npm-${{ hashFiles('**/package-lock.json') }}
-
-    - name: Fallback if module cache fails
+    - name: Install node modules
       run: npm ci
-      if: steps.cache-packages.outputs.cache-hit != 'true'
 
     - name: Build and Publish to Worker
       uses: cloudflare/wrangler-action@4c10c1822abba527d820b29e6333e7f5dac2cabd # tag=2.0.0
