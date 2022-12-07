@@ -1,5 +1,3 @@
 {
-  "extends": [
-    "github>promise/renovate-config:fully-automated-repository"
-  ]
+  "extends": ["github>promise/renovate-config:fully-automated-repository"]
 }
