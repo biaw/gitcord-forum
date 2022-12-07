@@ -1,0 +1,24 @@
+{
+  "name": "gitcord-forum",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "deploy": "wrangler publish",
+    "deploy:dry": "wrangler publish --dry-run",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "4.20221111.1",
+    "@octokit/webhooks-types": "6.7.0",
+    "@tsconfig/node18-strictest-esm": "1.0.1",
+    "discord-api-types": "0.37.21",
+    "eslint": "8.29.0",
+    "eslint-config-promise": "github:promise/eslint-config",
+    "typescript": "4.9.3",
+    "wrangler": "2.6.0"
+  },
+  "eslintConfig": {
+    "extends": "promise"
+  }
+}
