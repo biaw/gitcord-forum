@@ -4,7 +4,7 @@ import { getForumPostThreadIdForRepository } from "./discordForumPost";
 
 export default async function handleGithubEvent(data: WebhookEvent, request: Request): Promise<Response> {
   if ("repository" in data && !(
-    "pusher" in data && data.pusher.name !== "renovate[bot]" ||
+    "pusher" in data && data.pusher.name === "renovate[bot]" ||
     "ref_type" in data && data.ref_type === "branch" && data.ref.startsWith("refs/heads/renovate")
   )) {
     const url = new URL(`${DISCORD_WEBHOOK}/github`);
