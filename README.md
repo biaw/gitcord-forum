@@ -1,7 +1,7 @@
 [![Deploy](https://img.shields.io/github/workflow/status/biaw/gitcord-forum/Build%20and%20publish?label=build)](https://github.com/biaw/gitcord-forum/actions/workflows/build-and-publish.yml)
 [![Linting](https://img.shields.io/github/workflow/status/biaw/gitcord-forum/Linting?label=quality)](https://github.com/biaw/gitcord-forum/actions/workflows/linting.yml)
 [![Analysis and Scans](https://img.shields.io/github/workflow/status/biaw/gitcord-forum/Analysis%20and%20Scans?label=scan)](https://github.com/biaw/gitcord-forum/actions/workflows/analysis-and-scans.yml)
-<!-- deepscan -->
+[![DeepScan grade](https://deepscan.io/api/teams/16173/projects/23243/branches/698660/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16173&pid=23243&bid=698660)
 [![GitHub Issues](https://img.shields.io/github/issues-raw/biaw/gitcord-forum.svg)](https://github.com/biaw/gitcord-forum/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr-raw/biaw/gitcord-forum.svg)](https://github.com/biaw/gitcord-forum/pulls)
 
