@@ -21,7 +21,7 @@ async function createForumPostForRepository(repository: Repository): Promise<Rep
     body: JSON.stringify({
       // eslint-disable-next-line camelcase
       thread_name: `[${repository.owner.login}] ${repository.name}`,
-      ...generateForumPostFirstMessage(repository),
+      ...await generateForumPostFirstMessage(repository),
     } as RESTPostAPIWebhookWithTokenJSONBody),
   }).then(res => res.json());
 
@@ -41,7 +41,7 @@ async function updateForumPostForRepository(repository: Repository, { threadId, 
   const message: RESTError | RESTPatchAPIWebhookWithTokenMessageJSONBody = await fetch(url, {
     method: "PATCH",
     headers: new Headers({ "Content-Type": "application/json" }),
-    body: JSON.stringify(generateForumPostFirstMessage(repository)),
+    body: JSON.stringify(await generateForumPostFirstMessage(repository)),
   }).then(res => res.json());
 
   if ("code" in message) throw new Error(String(message));
