@@ -1,4 +1,4 @@
-import type { RESTError, RESTPatchAPIWebhookWithTokenMessageJSONBody, RESTPostAPIWebhookWithTokenJSONBody, RESTPostAPIWebhookWithTokenWaitResult, Snowflake } from "discord-api-types/v10";
+import type { RESTError, RESTPostAPIWebhookWithTokenJSONBody, RESTPostAPIWebhookWithTokenWaitResult, Snowflake } from "discord-api-types/v10";
 import type { Repository } from "@octokit/webhooks-types";
 import { generateForumPostFirstMessage } from "./generateFirstMessage";
 
@@ -15,7 +15,7 @@ async function createForumPostForRepository(repository: Repository): Promise<Rep
   const url = new URL(DISCORD_WEBHOOK);
   url.searchParams.set("wait", "true");
 
-  const message: RESTError | RESTPostAPIWebhookWithTokenWaitResult = await fetch(url, {
+  const message: RESTError | RESTPostAPIWebhookWithTokenWaitResult | null = await fetch(url, {
     method: "POST",
     headers: new Headers({ "Content-Type": "application/json" }),
     body: JSON.stringify({
@@ -23,9 +23,11 @@ async function createForumPostForRepository(repository: Repository): Promise<Rep
       thread_name: `[${repository.owner.login}] ${repository.name}`,
       ...await generateForumPostFirstMessage(repository),
     } as RESTPostAPIWebhookWithTokenJSONBody),
-  }).then(res => res.json());
+  })
+    .then(res => res.json<RESTError | RESTPostAPIWebhookWithTokenWaitResult>())
+    .catch(() => null);
 
-  if ("code" in message) throw new Error(String(message));
+  if (!message || "code" in message) throw new Error(String(message));
 
   const threadId = message.channel_id;
   const firstMessageId = message.id;
@@ -38,11 +40,9 @@ async function updateForumPostForRepository(repository: Repository, { threadId, 
   const url = new URL(`${DISCORD_WEBHOOK}/messages/${firstMessageId}`);
   url.searchParams.set("thread_id", threadId);
 
-  const message: RESTError | RESTPatchAPIWebhookWithTokenMessageJSONBody = await fetch(url, {
+  await fetch(url, {
     method: "PATCH",
     headers: new Headers({ "Content-Type": "application/json" }),
     body: JSON.stringify(await generateForumPostFirstMessage(repository)),
-  }).then(res => res.json());
-
-  if ("code" in message) throw new Error(String(message));
+  })
 }

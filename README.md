@@ -10,9 +10,12 @@
 A middleware designed to sort your repositories into forum posts.
 
 <details>
-  <summary>Screenshots</summary>
-
-  <!-- insert screenshots -->
+  <summary>Screenshot</summary>
+  
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/10573728/206237592-9104b964-74d6-4a29-a2ab-f36dc400481c.png">
+    <img alt="Image of the forum channel on Discord" src="https://user-images.githubusercontent.com/10573728/206237630-b76efa8e-68a2-498d-9463-edfe3d75f58a.png">
+  </picture>
 </details>
 
 ## Usage examples
