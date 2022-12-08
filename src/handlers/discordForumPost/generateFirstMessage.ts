@@ -8,7 +8,8 @@ export async function generateForumPostFirstMessage(repository: Repository): Pro
     .then(unknowns => [
       unknowns.filter(issue => !issue.pull_request && issue.title !== "Dependency Dashboard"),
       unknowns.filter(issue => issue.pull_request),
-    ] as const);
+    ] as const)
+    .catch(() => [[], []] as const);
 
   const amountOfIssues = Math.min(Math.max(4 - pulls.length, 0) + 4, issues.length);
   const amountOfPulls = Math.min(Math.max(4 - issues.length, 0) + 4, pulls.length);
