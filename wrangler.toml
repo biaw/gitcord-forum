@@ -18,4 +18,5 @@ command = "npm run build"
 # - DISCORD_WEBHOOK       - your discord webhook link (needs to be in a forum channel!)
 # All sensitive variables get a default value of "" just so the worker doesn't crash
 
+IGNORED_USERS = "renovate[bot],github-actions[bot],cloudflare-pages[bot]"
 FALLBACK_URL = "https://github.com/biaw/gitcord-forum" # Fallback URL for when a user types the worker address
