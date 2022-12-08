@@ -44,5 +44,5 @@ async function updateForumPostForRepository(repository: Repository, { threadId, 
     method: "PATCH",
     headers: new Headers({ "Content-Type": "application/json" }),
     body: JSON.stringify(await generateForumPostFirstMessage(repository)),
-  })
+  });
 }
