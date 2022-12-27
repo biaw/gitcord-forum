@@ -4,7 +4,7 @@ repository:
   name: gitcord-forum
   description: "A middleware designed to sort your repository feeds into Discord forum posts. Built with Cloudflare Workers"
   private: false
-  topics: discord, discord-bot, discord-rest, cloudflare, cf-worker, cf-workers, cloudflare-worker, cloudflare-workers, middleware
+  topics: "discord, discord-bot, discord-rest, cloudflare, cf-worker, cf-workers, cloudflare-worker, cloudflare-workers, middleware"
 
 branches:
   - name: main
