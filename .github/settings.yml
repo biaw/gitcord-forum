@@ -1,0 +1,18 @@
+_extends: .github
+
+repository:
+  name: gitcord-forum
+  description: "A middleware designed to sort your repository feeds into Discord forum posts"
+  private: false
+
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        checks:
+          - context: ESLint
+          - context: CodeQL Analysis
+          - context: OSSAR Analysis
+          - context: NJS Scan
+          - context: Build
+          - context: DeepScan
