@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20221111.1",
-    "@octokit/webhooks-types": "6.9.0",
+    "@octokit/webhooks-types": "6.10.0",
     "@tsconfig/node18-strictest-esm": "1.0.1",
     "eslint": "8.32.0",
     "eslint-config-promise": "github:promise/eslint-config",
