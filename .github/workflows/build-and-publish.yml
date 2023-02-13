@@ -48,6 +48,9 @@ jobs:
         restore-keys: |
           pnpm-store-
 
+    - name: Install dependencies
+      run: pnpm install
+
     - name: Test worker build
       uses: cloudflare/wrangler-action@4c10c1822abba527d820b29e6333e7f5dac2cabd # tag=2.0.0
       with:
@@ -91,6 +94,9 @@ jobs:
         key: pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
         restore-keys: |
           pnpm-store-
+
+    - name: Install dependencies
+      run: pnpm install
 
     - name: Publish to Worker
       uses: cloudflare/wrangler-action@4c10c1822abba527d820b29e6333e7f5dac2cabd # tag=2.0.0
