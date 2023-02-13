@@ -11,9 +11,7 @@ branches:
     protection:
       required_status_checks:
         checks:
-          - context: ESLint
-          - context: CodeQL Analysis
-          - context: OSSAR Analysis
-          - context: NJS Scan
           - context: Build
+          - context: ESLint
           - context: DeepScan
+          - context: CodeQL
