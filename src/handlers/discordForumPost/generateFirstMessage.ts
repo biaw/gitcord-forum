@@ -1,8 +1,8 @@
-import { ButtonStyle, ComponentType } from "discord-api-types/v10";
 import type { Issue, Repository } from "@octokit/webhooks-types";
 import type { RESTPatchAPIWebhookWithTokenJSONBody, RESTPostAPIWebhookWithTokenJSONBody } from "discord-api-types/v10";
+import { ButtonStyle, ComponentType } from "discord-api-types/v10";
 
-export async function generateForumPostFirstMessage(repository: Repository): Promise<RESTPatchAPIWebhookWithTokenJSONBody & RESTPostAPIWebhookWithTokenJSONBody> {
+export default async function generateForumPostFirstMessage(repository: Repository): Promise<RESTPatchAPIWebhookWithTokenJSONBody & RESTPostAPIWebhookWithTokenJSONBody> {
   const [issues, pulls] = await fetch(`${repository.url}/issues`, { headers: { "User-Agent": "biaw/gitcord-forum (promise.solutions)" }})
     .then(res => res.json<Issue[]>())
     .then(unknowns => [

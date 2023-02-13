@@ -1,6 +1,5 @@
 import type { WebhookEvent } from "@octokit/webhooks-types";
-
-import { getForumPostThreadIdForRepository } from "./discordForumPost";
+import getForumPostThreadIdForRepository from "./discordForumPost";
 
 export default async function handleGithubEvent(data: WebhookEvent, request: Request): Promise<Response> {
   if ("repository" in data && !(

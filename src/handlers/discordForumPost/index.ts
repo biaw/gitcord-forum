@@ -1,10 +1,10 @@
-import type { RESTError, RESTPostAPIWebhookWithTokenJSONBody, RESTPostAPIWebhookWithTokenWaitResult, Snowflake } from "discord-api-types/v10";
 import type { Repository } from "@octokit/webhooks-types";
-import { generateForumPostFirstMessage } from "./generateFirstMessage";
+import type { RESTError, RESTPostAPIWebhookWithTokenJSONBody, RESTPostAPIWebhookWithTokenWaitResult, Snowflake } from "discord-api-types/v10";
+import generateForumPostFirstMessage from "./generateFirstMessage";
 
 interface RepositoryDetails { threadId: Snowflake; firstMessageId: Snowflake }
 
-export async function getForumPostThreadIdForRepository(repository: Repository): Promise<Snowflake> {
+export default async function getForumPostThreadIdForRepository(repository: Repository): Promise<Snowflake> {
   const repositoryDetailsFromDatabase = await DB.get<RepositoryDetails>(`repository_config_${repository.id}`, "json");
   if (repositoryDetailsFromDatabase) await updateForumPostForRepository(repository, repositoryDetailsFromDatabase);
 
