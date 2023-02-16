@@ -18,7 +18,7 @@ devDependencies:
   '@octokit/webhooks-types': 6.10.0
   '@tsconfig/strictest': 1.0.2
   eslint: 8.34.0
-  eslint-config-promise: github.com/promise/eslint-config/9307ff5e449b35860442e75b6555f5c3187b20c0_2bepdrichzi2p7to35qb73hy6e
+  eslint-config-promise: github.com/promise/eslint-config/374e2c8bc9f1cee75219c909881c26d273f36941_2bepdrichzi2p7to35qb73hy6e
   typescript: 4.9.5
   wrangler: 2.9.1
 
@@ -2633,14 +2633,14 @@ packages:
       stack-trace: 0.0.10
     dev: true
 
-  github.com/promise/eslint-config/9307ff5e449b35860442e75b6555f5c3187b20c0_2bepdrichzi2p7to35qb73hy6e:
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/9307ff5e449b35860442e75b6555f5c3187b20c0}
-    id: github.com/promise/eslint-config/9307ff5e449b35860442e75b6555f5c3187b20c0
+  github.com/promise/eslint-config/374e2c8bc9f1cee75219c909881c26d273f36941_2bepdrichzi2p7to35qb73hy6e:
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/374e2c8bc9f1cee75219c909881c26d273f36941}
+    id: github.com/promise/eslint-config/374e2c8bc9f1cee75219c909881c26d273f36941
     name: eslint-config-promise
     version: 0.0.0
     peerDependencies:
-      '@typescript-eslint/eslint-plugin': ^5.51.0
-      '@typescript-eslint/parser': ^5.51.0
+      '@typescript-eslint/eslint-plugin': ^5.52.0
+      '@typescript-eslint/parser': ^5.52.0
       eslint: ^8.34.0
       eslint-import-resolver-typescript: ^3.5.3
       eslint-plugin-import: ^2.27.5
