@@ -4,21 +4,21 @@ specifiers:
   '@cloudflare/workers-types': 4.20230214.0
   '@octokit/webhooks-types': 6.10.0
   '@tsconfig/strictest': 1.0.2
-  discord-api-types: 0.37.33
+  discord-api-types: 0.37.34
   eslint: 8.34.0
   eslint-config-promise: github:promise/eslint-config
   typescript: 4.9.5
   wrangler: 2.9.1
 
 dependencies:
-  discord-api-types: 0.37.33
+  discord-api-types: 0.37.34
 
 devDependencies:
   '@cloudflare/workers-types': 4.20230214.0
   '@octokit/webhooks-types': 6.10.0
   '@tsconfig/strictest': 1.0.2
   eslint: 8.34.0
-  eslint-config-promise: github.com/promise/eslint-config/374e2c8bc9f1cee75219c909881c26d273f36941_2bepdrichzi2p7to35qb73hy6e
+  eslint-config-promise: github.com/promise/eslint-config/8e00970f6c563e7dae718b912faea526d45532f8_2bepdrichzi2p7to35qb73hy6e
   typescript: 4.9.5
   wrangler: 2.9.1
 
@@ -916,8 +916,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /discord-api-types/0.37.33:
-    resolution: {integrity: sha512-ZMH5RU3q1pvYS+2wGUJ5Zvy8jMGTQ4wCpbDlIQDkbIL/k6kJwBPsXnCg81g2GywlOuf0f8ezakxVSe+sZuY6ig==}
+  /discord-api-types/0.37.34:
+    resolution: {integrity: sha512-3sX2QMX2vLjT93n6+c1rN6lM6qWHycjYol6x/ls6U5hbZPdGH00dRMjg2csF58ISMf7DGV/6inDKgY1u5niWhA==}
     dev: false
 
   /doctrine/2.1.0:
@@ -2633,9 +2633,9 @@ packages:
       stack-trace: 0.0.10
     dev: true
 
-  github.com/promise/eslint-config/374e2c8bc9f1cee75219c909881c26d273f36941_2bepdrichzi2p7to35qb73hy6e:
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/374e2c8bc9f1cee75219c909881c26d273f36941}
-    id: github.com/promise/eslint-config/374e2c8bc9f1cee75219c909881c26d273f36941
+  github.com/promise/eslint-config/8e00970f6c563e7dae718b912faea526d45532f8_2bepdrichzi2p7to35qb73hy6e:
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/8e00970f6c563e7dae718b912faea526d45532f8}
+    id: github.com/promise/eslint-config/8e00970f6c563e7dae718b912faea526d45532f8
     name: eslint-config-promise
     version: 0.0.0
     peerDependencies:
