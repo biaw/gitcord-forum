@@ -3,7 +3,7 @@ import type { RESTPatchAPIWebhookWithTokenJSONBody, RESTPostAPIWebhookWithTokenJ
 import { ButtonStyle, ComponentType } from "discord-api-types/v10";
 
 export default async function generateForumPostFirstMessage(repository: Repository): Promise<RESTPatchAPIWebhookWithTokenJSONBody & RESTPostAPIWebhookWithTokenJSONBody> {
-  const [issues, pulls] = await fetch(`${repository.url}/issues`, { headers: { "User-Agent": "biaw/gitcord-forum (promise.solutions)" }})
+  const [issues, pulls] = await fetch(`${repository.url}/issues`, { headers: { "User-Agent": "biaw/gitcord-forum (promise.solutions)" } })
     .then(res => res.json<Issue[]>())
     .then(unknowns => [
       unknowns.filter(issue => !issue.pull_request && issue.title !== "Dependency Dashboard"),
@@ -61,6 +61,6 @@ export default async function generateForumPostFirstMessage(repository: Reposito
       },
     ],
     // eslint-disable-next-line camelcase
-    allowed_mentions: { parse: []},
+    allowed_mentions: { parse: [] },
   };
 }
