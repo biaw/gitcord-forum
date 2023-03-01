@@ -18,7 +18,7 @@ devDependencies:
   '@octokit/webhooks-types': 6.10.0
   '@tsconfig/strictest': 1.0.2
   eslint: 8.35.0
-  eslint-config-promise: github.com/promise/eslint-config/ae3925064fa939b6d19c56817b5fb20d0b022da4_dnraj3q5zlrehm5jfedec5mdmy
+  eslint-config-promise: github.com/promise/eslint-config/1ad2096887e0325968697db3fb129388cb3a5955_dnraj3q5zlrehm5jfedec5mdmy
   typescript: 4.9.5
   wrangler: 2.12.0
 
@@ -2645,9 +2645,9 @@ packages:
       stack-trace: 0.0.10
     dev: true
 
-  github.com/promise/eslint-config/ae3925064fa939b6d19c56817b5fb20d0b022da4_dnraj3q5zlrehm5jfedec5mdmy:
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/ae3925064fa939b6d19c56817b5fb20d0b022da4}
-    id: github.com/promise/eslint-config/ae3925064fa939b6d19c56817b5fb20d0b022da4
+  github.com/promise/eslint-config/1ad2096887e0325968697db3fb129388cb3a5955_dnraj3q5zlrehm5jfedec5mdmy:
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/1ad2096887e0325968697db3fb129388cb3a5955}
+    id: github.com/promise/eslint-config/1ad2096887e0325968697db3fb129388cb3a5955
     name: eslint-config-promise
     version: 0.0.0
     peerDependencies:
