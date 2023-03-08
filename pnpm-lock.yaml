@@ -8,7 +8,7 @@ specifiers:
   eslint: 8.35.0
   eslint-config-promise: github:promise/eslint-config
   typescript: 4.9.5
-  wrangler: 2.12.1
+  wrangler: 2.12.2
 
 dependencies:
   discord-api-types: 0.37.35
@@ -18,9 +18,9 @@ devDependencies:
   '@octokit/webhooks-types': 6.10.0
   '@tsconfig/strictest': 1.0.2
   eslint: 8.35.0
-  eslint-config-promise: github.com/promise/eslint-config/22260e693c0e11fa2739ac1d9a63ccb3727f90c6_kxxj7ovrjyqwqhfbjkojlpranq
+  eslint-config-promise: github.com/promise/eslint-config/11a8241a86c521bed62c0c4551bb30ca6962fc3d_kxxj7ovrjyqwqhfbjkojlpranq
   typescript: 4.9.5
-  wrangler: 2.12.1
+  wrangler: 2.12.2
 
 packages:
 
@@ -2576,8 +2576,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /wrangler/2.12.1:
-    resolution: {integrity: sha512-u0GNyPRc6oabd7dQf8BSj1ztJtDlvvHJMVTuCuFDUFbQQKCDXmCnlLk/ZzPE0sfBsMH9LdyMqx4inRiJt6LbjQ==}
+  /wrangler/2.12.2:
+    resolution: {integrity: sha512-pjdZvcjiFD6mI3Nncsw3hBv3rxjMx0n4Mtp+Tsql/hvr0LpOmHKlW/aMeYx/fVUmjEKfWBSULc1vgM02O2UTWQ==}
     engines: {node: '>=16.13.0'}
     hasBin: true
     dependencies:
@@ -2645,9 +2645,9 @@ packages:
       stack-trace: 0.0.10
     dev: true
 
-  github.com/promise/eslint-config/22260e693c0e11fa2739ac1d9a63ccb3727f90c6_kxxj7ovrjyqwqhfbjkojlpranq:
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/22260e693c0e11fa2739ac1d9a63ccb3727f90c6}
-    id: github.com/promise/eslint-config/22260e693c0e11fa2739ac1d9a63ccb3727f90c6
+  github.com/promise/eslint-config/11a8241a86c521bed62c0c4551bb30ca6962fc3d_kxxj7ovrjyqwqhfbjkojlpranq:
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/11a8241a86c521bed62c0c4551bb30ca6962fc3d}
+    id: github.com/promise/eslint-config/11a8241a86c521bed62c0c4551bb30ca6962fc3d
     name: eslint-config-promise
     version: 0.0.0
     peerDependencies:
