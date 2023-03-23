@@ -4,14 +4,14 @@ specifiers:
   '@cloudflare/workers-types': 4.20230321.0
   '@octokit/webhooks-types': 6.10.0
   '@tsconfig/strictest': 1.0.2
-  discord-api-types: 0.37.36
+  discord-api-types: 0.37.37
   eslint: 8.36.0
   eslint-config-promise: github:promise/eslint-config
   typescript: 4.9.5
   wrangler: 2.13.0
 
 dependencies:
-  discord-api-types: 0.37.36
+  discord-api-types: 0.37.37
 
 devDependencies:
   '@cloudflare/workers-types': 4.20230321.0
@@ -936,8 +936,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /discord-api-types/0.37.36:
-    resolution: {integrity: sha512-Nlxmp10UpVr/utgZ9uODQvG2Or+5w7LFrvFMswyeKC9l/+UaqGT6H0OVgEFhu9GEO4U6K7NNO5W8Carv7irnCA==}
+  /discord-api-types/0.37.37:
+    resolution: {integrity: sha512-LDMBKzl/zbvHO/yCzno5hevuA6lFIXJwdKSJZQrB+1ToDpFfN9thK+xxgZNR4aVkI7GHRDja0p4Sl2oYVPnHYg==}
     dev: false
 
   /doctrine/2.1.0:
