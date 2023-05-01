@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   discord-api-types:
-    specifier: 0.37.40
-    version: 0.37.40
+    specifier: 0.37.41
+    version: 0.37.41
 
 devDependencies:
   '@cloudflare/workers-types':
@@ -949,8 +949,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /discord-api-types@0.37.40:
-    resolution: {integrity: sha512-LMALvtO+p6ERK8rwWoaI490NfIE/egbqjR4/rfLL1z9gQE1gqLiTpIUUDIunfAtKYzeH6ucyXhaXXWpfZh/Q6g==}
+  /discord-api-types@0.37.41:
+    resolution: {integrity: sha512-FaPGBK9hx3zqSRX1x3KQWj+OElAJKmcyyfcdCy+U4AKv+gYuIkRySM7zd1So2sE4gc1DikkghkSBgBgKh6pe4Q==}
     dev: false
 
   /doctrine@2.1.0:
