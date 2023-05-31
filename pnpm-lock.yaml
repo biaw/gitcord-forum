@@ -1,9 +1,13 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 dependencies:
   discord-api-types:
-    specifier: 0.37.42
-    version: 0.37.42
+    specifier: 0.37.43
+    version: 0.37.43
 
 devDependencies:
   '@cloudflare/workers-types':
@@ -873,8 +877,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /discord-api-types@0.37.42:
-    resolution: {integrity: sha512-1Huaj9cQ1W7/uryS8MZs/tZemnoKB94thM1cE40lep3rpU3q7WHqkdjN/veX0prTkYlPhcyLd/DeF/pBO8X8oQ==}
+  /discord-api-types@0.37.43:
+    resolution: {integrity: sha512-bBhDWU3TF9KADxR/mHp1K4Bvu/LRtFQdGyBjADu4e66F3ZnD4kp12W/SJCttIaCcMXzPV3sfty6eDGRNRph51Q==}
     dev: false
 
   /doctrine@2.1.0:
