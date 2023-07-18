@@ -12,7 +12,7 @@
     "discord-api-types": "0.37.49"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20230710.1",
+    "@cloudflare/workers-types": "4.20230717.0",
     "@octokit/webhooks-types": "7.1.0",
     "@tsconfig/strictest": "2.0.1",
     "eslint": "8.45.0",
