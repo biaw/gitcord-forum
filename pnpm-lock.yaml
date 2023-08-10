@@ -14,8 +14,8 @@ devDependencies:
     specifier: 4.20230807.0
     version: 4.20230807.0
   '@octokit/webhooks-types':
-    specifier: 7.1.0
-    version: 7.1.0
+    specifier: 7.2.0
+    version: 7.2.0
   '@tsconfig/strictest':
     specifier: 2.0.1
     version: 2.0.1
@@ -24,7 +24,7 @@ devDependencies:
     version: 8.46.0
   eslint-config-promise:
     specifier: github:promise/eslint-config
-    version: github.com/promise/eslint-config/b20c16cfa90044542cb5797fe13a09f14f1aa29e(@typescript-eslint/eslint-plugin@6.3.0)(@typescript-eslint/parser@6.3.0)(eslint-plugin-i@2.27.5)(eslint-plugin-jest@27.2.3)(eslint-plugin-react@7.33.1)(eslint@8.46.0)
+    version: github.com/promise/eslint-config/8465168d478a90004c4897ee20f0030543c01d05(@typescript-eslint/eslint-plugin@6.3.0)(@typescript-eslint/parser@6.3.0)(eslint-plugin-i@2.27.5)(eslint-plugin-jest@27.2.3)(eslint-plugin-react@7.33.1)(eslint@8.46.0)
   typescript:
     specifier: 5.1.6
     version: 5.1.6
@@ -388,8 +388,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@octokit/webhooks-types@7.1.0:
-    resolution: {integrity: sha512-y92CpG4kFFtBBjni8LHoV12IegJ+KFxLgKRengrVjKmGE5XMeCuGvlfRe75lTRrgXaG6XIWJlFpIDTlkoJsU8w==}
+  /@octokit/webhooks-types@7.2.0:
+    resolution: {integrity: sha512-TX6347q0TJbKZD5M1wiMFUrq8T/GP6PkcnssLfw/fZ+//jkW8uRvOl63bNlhPGt82sml9Dy5nSPP0GIHW9XBTQ==}
     dev: true
 
   /@tsconfig/strictest@2.0.1:
@@ -2644,9 +2644,9 @@ packages:
     resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
     dev: true
 
-  github.com/promise/eslint-config/b20c16cfa90044542cb5797fe13a09f14f1aa29e(@typescript-eslint/eslint-plugin@6.3.0)(@typescript-eslint/parser@6.3.0)(eslint-plugin-i@2.27.5)(eslint-plugin-jest@27.2.3)(eslint-plugin-react@7.33.1)(eslint@8.46.0):
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/b20c16cfa90044542cb5797fe13a09f14f1aa29e}
-    id: github.com/promise/eslint-config/b20c16cfa90044542cb5797fe13a09f14f1aa29e
+  github.com/promise/eslint-config/8465168d478a90004c4897ee20f0030543c01d05(@typescript-eslint/eslint-plugin@6.3.0)(@typescript-eslint/parser@6.3.0)(eslint-plugin-i@2.27.5)(eslint-plugin-jest@27.2.3)(eslint-plugin-react@7.33.1)(eslint@8.46.0):
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/8465168d478a90004c4897ee20f0030543c01d05}
+    id: github.com/promise/eslint-config/8465168d478a90004c4897ee20f0030543c01d05
     name: eslint-config-promise
     version: 0.0.0
     peerDependencies:
