@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   discord-api-types:
-    specifier: 0.37.52
-    version: 0.37.52
+    specifier: 0.37.53
+    version: 0.37.53
 
 devDependencies:
   '@cloudflare/workers-types':
@@ -936,8 +936,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /discord-api-types@0.37.52:
-    resolution: {integrity: sha512-TP99aMgY6rHuDIy056GDm1j2nGOcaLbFpjVbvAmv6N6vhkjHNqHXCHVqKtGisaQ8D15slbxTHNl/SSkPdx2syg==}
+  /discord-api-types@0.37.53:
+    resolution: {integrity: sha512-N6uUgv50OyP981Mfxrrt0uxcqiaNr0BDaQIoqfk+3zM2JpZtwU9v7ce1uaFAP53b2xSDvcbrk80Kneui6XJgGg==}
     dev: false
 
   /doctrine@2.1.0:
