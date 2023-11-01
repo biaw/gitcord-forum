@@ -24,7 +24,7 @@ devDependencies:
     version: 8.52.0
   eslint-config-promise:
     specifier: github:promise/eslint-config
-    version: github.com/promise/eslint-config/8bda9e165408617c6be99bc2885e0cbbfe0bc3e8(@typescript-eslint/eslint-plugin@6.9.1)(@typescript-eslint/parser@6.9.1)(eslint-plugin-i@2.28.1)(eslint-plugin-jest@27.6.0)(eslint-plugin-react@7.33.2)(eslint-plugin-tailwindcss@3.13.0)(eslint@8.52.0)
+    version: github.com/promise/eslint-config/aef8d2862c9715c24ab836f13451494631492146(@typescript-eslint/eslint-plugin@6.9.1)(@typescript-eslint/parser@6.9.1)(eslint-plugin-i@2.28.1)(eslint-plugin-jest@27.6.0)(eslint-plugin-react@7.33.2)(eslint-plugin-tailwindcss@3.13.0)(eslint@8.52.0)
   typescript:
     specifier: 5.2.2
     version: 5.2.2
@@ -2861,9 +2861,9 @@ packages:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
     dev: true
 
-  github.com/promise/eslint-config/8bda9e165408617c6be99bc2885e0cbbfe0bc3e8(@typescript-eslint/eslint-plugin@6.9.1)(@typescript-eslint/parser@6.9.1)(eslint-plugin-i@2.28.1)(eslint-plugin-jest@27.6.0)(eslint-plugin-react@7.33.2)(eslint-plugin-tailwindcss@3.13.0)(eslint@8.52.0):
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/8bda9e165408617c6be99bc2885e0cbbfe0bc3e8}
-    id: github.com/promise/eslint-config/8bda9e165408617c6be99bc2885e0cbbfe0bc3e8
+  github.com/promise/eslint-config/aef8d2862c9715c24ab836f13451494631492146(@typescript-eslint/eslint-plugin@6.9.1)(@typescript-eslint/parser@6.9.1)(eslint-plugin-i@2.28.1)(eslint-plugin-jest@27.6.0)(eslint-plugin-react@7.33.2)(eslint-plugin-tailwindcss@3.13.0)(eslint@8.52.0):
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/aef8d2862c9715c24ab836f13451494631492146}
+    id: github.com/promise/eslint-config/aef8d2862c9715c24ab836f13451494631492146
     name: eslint-config-promise
     version: 0.0.0
     peerDependencies:
