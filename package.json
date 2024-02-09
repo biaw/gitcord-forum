@@ -14,7 +14,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "4.20240208.0",
     "@octokit/webhooks-types": "7.3.2",
-    "@tsconfig/strictest": "2.0.2",
+    "@tsconfig/strictest": "2.0.3",
     "eslint": "8.56.0",
     "eslint-config-promise": "github:promise/eslint-config",
     "typescript": "5.3.3",
