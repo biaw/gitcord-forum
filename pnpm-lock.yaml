@@ -14,8 +14,8 @@ devDependencies:
     specifier: 4.20240402.0
     version: 4.20240402.0
   '@octokit/webhooks-types':
-    specifier: 7.4.0
-    version: 7.4.0
+    specifier: 7.5.0
+    version: 7.5.0
   '@tsconfig/strictest':
     specifier: 2.0.5
     version: 2.0.5
@@ -454,8 +454,8 @@ packages:
       fastq: 1.17.1
     dev: true
 
-  /@octokit/webhooks-types@7.4.0:
-    resolution: {integrity: sha512-FE2V+QZ2UYlh+9wWd5BPLNXG+J/XUD/PPq0ovS+nCcGX4+3qVbi3jYOmCTW48hg9SBBLtInx9+o7fFt4H5iP0Q==}
+  /@octokit/webhooks-types@7.5.0:
+    resolution: {integrity: sha512-oFypF1oD0z1x4qi+Ff4ienJ/iZ3GBXoht+0B+x8gMIWiNhRJZADYO+2KOh03ZGOX8WF6iJELZWw+giHieBO7rg==}
     dev: true
 
   /@pkgjs/parseargs@0.11.0:
