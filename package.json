@@ -9,7 +9,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "discord-api-types": "0.37.81"
+    "discord-api-types": "0.37.82"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20240423.0",
