@@ -17,7 +17,7 @@
     "@tsconfig/strictest": "2.0.5",
     "eslint": "8.57.0",
     "eslint-config-promise": "github:promise/eslint-config",
-    "typescript": "5.5.4",
+    "typescript": "5.6.2",
     "wrangler": "3.75.0"
   },
   "eslintConfig": {
