@@ -26,7 +26,6 @@ function safeCompare(expected: string, actual: string) {
   }
 
   for (let i = 0; i < lenExpected; i += 1) {
-    // eslint-disable-next-line
     result |= expected.charCodeAt(i) ^ actual.charCodeAt(i);
   }
 

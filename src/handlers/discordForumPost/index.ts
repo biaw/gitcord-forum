@@ -2,7 +2,7 @@ import type { Repository } from "@octokit/webhooks-types";
 import type { RESTError, RESTPostAPIWebhookWithTokenJSONBody, RESTPostAPIWebhookWithTokenWaitResult, Snowflake } from "discord-api-types/v10";
 import generateForumPostFirstMessage from "./generateFirstMessage";
 
-interface RepositoryDetails { threadId: Snowflake; firstMessageId: Snowflake }
+interface RepositoryDetails { firstMessageId: Snowflake; threadId: Snowflake }
 
 export default async function getForumPostThreadIdForRepository(repository: Repository): Promise<Snowflake> {
   const repositoryDetailsFromDatabase = await DB.get<RepositoryDetails>(`repository_config_${repository.id}`, "json");
@@ -15,7 +15,7 @@ async function createForumPostForRepository(repository: Repository): Promise<Rep
   const url = new URL(DISCORD_WEBHOOK);
   url.searchParams.set("wait", "true");
 
-  const message: RESTError | RESTPostAPIWebhookWithTokenWaitResult | null = await fetch(url, {
+  const message: null | RESTError | RESTPostAPIWebhookWithTokenWaitResult = await fetch(url, {
     method: "POST",
     headers: new Headers({ "Content-Type": "application/json" }),
     body: JSON.stringify({
@@ -27,7 +27,7 @@ async function createForumPostForRepository(repository: Repository): Promise<Rep
     .then(res => res.json<RESTError | RESTPostAPIWebhookWithTokenWaitResult>())
     .catch(() => null);
 
-  if (!message || "code" in message) throw new Error(String(message));
+  if (!message || "code" in message) throw new Error(message?.message ?? "Unknown error occurred while creating forum post");
 
   const threadId = message.channel_id;
   const firstMessageId = message.id;
