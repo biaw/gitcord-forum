@@ -61,3 +61,20 @@ sequenceDiagram
     W->>D: Forward GitHub event to new or existing forum thread
     W->>G: 200 OK
 ```
+
+## Build and Publish Workflow
+
+The `build-and-publish.yml` workflow is designed to build and publish the project. Here is how it operates:
+
+* The workflow is triggered by events such as a push to the `main` branch, a pull request to the `main` branch, a manual trigger (`workflow_dispatch`), or a repository dispatch event.
+* The workflow defines a single job named `build` that runs on the `ubuntu-latest` environment.
+* The job name is dynamically set to "Publish" if the event is a push to the `main` branch, otherwise it is set to "Test build".
+* The job only runs if the event is a pull request.
+* The job consists of several steps:
+  * Checkout the repository using the `actions/checkout` action.
+  * Set up `pnpm` using the `pnpm/action-setup` action without running the install command.
+  * Set up Node.js using the `actions/setup-node` action, specifying the Node.js version from the `.nvmrc` file and caching `pnpm` dependencies.
+  * Install dependencies using `pnpm install --frozen-lockfile`.
+  * Build and publish the project using the `cloudflare/wrangler-action` action. If the event is a push to the `main` branch, the command is `deploy`, otherwise it is `deploy --dry-run`.
+
+The workflow file can be found at `.github/workflows/build-and-publish.yml`.
