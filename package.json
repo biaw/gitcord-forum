@@ -15,7 +15,7 @@
     "@cloudflare/workers-types": "4.20250405.0",
     "@octokit/webhooks-types": "7.6.1",
     "@tsconfig/strictest": "2.0.5",
-    "eslint": "9.23.0",
+    "eslint": "9.24.0",
     "eslint-config-promise": "github:promise/eslint-config",
     "typescript": "5.8.3",
     "wrangler": "4.7.2"
