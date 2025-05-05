@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       discord-api-types:
-        specifier: 0.38.2
-        version: 0.38.2
+        specifier: 0.38.3
+        version: 0.38.3
     devDependencies:
       '@cloudflare/workers-types':
         specifier: 4.20250505.0
@@ -799,8 +799,8 @@ packages:
   didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
 
-  discord-api-types@0.38.2:
-    resolution: {integrity: sha512-GAPY1/Kv3aqEoBYgUYXB2tHdWJCZXfytlCzxZ4QMQ1/TIQn1JI+xUOukehl4iEa9m7fCURnMIOpOxpaTWqzX2w==}
+  discord-api-types@0.38.3:
+    resolution: {integrity: sha512-vijevLh06Gtmex6BQzc9jRrGce6La0qnsF4bKwKM2L1ou0/sbJIOAkg7wz6YLLaodnUwQLljIhtrGxnkMjc1Ew==}
 
   dlv@1.1.3:
     resolution: {integrity: sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==}
@@ -2749,7 +2749,7 @@ snapshots:
 
   didyoumean@1.2.2: {}
 
-  discord-api-types@0.38.2: {}
+  discord-api-types@0.38.3: {}
 
   dlv@1.1.3: {}
 
