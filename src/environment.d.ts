@@ -5,6 +5,7 @@ declare global {
   const DISCORD_WEBHOOK: string;
 
   const IGNORED_USERS: string;
+  const IGNORE_BOTS: "false" | "true";
   const FALLBACK_URL: string;
 
   const DB:
