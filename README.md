@@ -3,9 +3,7 @@
   <img alt="Image of the forum channel on Discord" src="https://socialify.git.ci/biaw/gitcord-forum/image?custom_language=Discord&description=1&font=Inter&forks=1&language=1&name=1&owner=1&pattern=Plus&stargazers=1&theme=Light">
 </picture>
 
-# Gitcord Forum
-
-## Explanation
+# Explanation
 
 Instead of having a single Discord channel for all your GitHub repository feeds, or having a separate tech channel for each repository, you can use this worker to create a forum post for each repository and sort your GitHub activity into those forum posts individually. This way, you can have a single channel for all your GitHub activity, but still keep it organized by repository - and users can easily follow the forum posts that they are interested in.
 
@@ -18,7 +16,7 @@ Instead of having a single Discord channel for all your GitHub repository feeds,
   </picture>
 </details>
 
-## Setting up with Cloudflare Workers
+# Setting up with Cloudflare Workers
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/biaw/gitcord-forum)
 
@@ -27,7 +25,7 @@ Instead of having a single Discord channel for all your GitHub repository feeds,
 3. Add your new worker URL (`https://gitcord-forum.WORKER_SUBDOMAIN.workers.dev/`) as a webhook in your GitHub repository settings with your preferred set of notifications to get from the repository. Make sure to set content type to `application/json` and also match the secret you set in the environment variables.
     * You can also add this URL as a webhook for your entire GitHub organization!
 
-## How the middleware works
+# How the middleware works
 
 ```mermaid
 sequenceDiagram
