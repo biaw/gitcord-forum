@@ -23,7 +23,6 @@ export default async function generateForumPostFirstMessage(repository: Reposito
         [
           `[\`⭐️${repository.stargazers_count}\`](<${repository.html_url}/stargazers>)`,
           `[\`🍴${repository.forks}\`](<${repository.html_url}/network/members>)`,
-          `[\`👀${repository.watchers}\`](<${repository.html_url}/watchers>)`,
           repository.private ? "`🔒`" : "",
           repository.archived ? "`🗃️`" : "",
           repository.disabled ? "`🚫`" : "",
