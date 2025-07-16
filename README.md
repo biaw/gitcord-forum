@@ -1,12 +1,13 @@
-[![Deploy](https://img.shields.io/github/actions/workflow/status/biaw/gitcord-forum/build-and-publish.yml?label=build)](https://github.com/biaw/gitcord-forum/actions/workflows/build-and-publish.yml)
-[![Linting](https://img.shields.io/github/actions/workflow/status/biaw/gitcord-forum/linting.yml?label=quality)](https://github.com/biaw/gitcord-forum/actions/workflows/linting.yml)
-[![DeepScan grade](https://deepscan.io/api/teams/16173/projects/23243/branches/698660/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16173&pid=23243&bid=698660)
-[![GitHub Issues](https://img.shields.io/github/issues-raw/biaw/gitcord-forum.svg)](https://github.com/biaw/gitcord-forum/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr-raw/biaw/gitcord-forum.svg)](https://github.com/biaw/gitcord-forum/pulls)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://socialify.git.ci/biaw/gitcord-forum/image?custom_language=Discord&description=1&font=Inter&forks=1&language=1&name=1&owner=1&pattern=Plus&stargazers=1&theme=Dark">
+  <img alt="Image of the forum channel on Discord" src="https://socialify.git.ci/biaw/gitcord-forum/image?custom_language=Discord&description=1&font=Inter&forks=1&language=1&name=1&owner=1&pattern=Plus&stargazers=1&theme=Light">
+</picture>
 
-# Gitcord Forum [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/biaw/gitcord-forum)
+# Gitcord Forum
 
-A middleware designed to sort your repositories into forum posts.
+## Explanation
+
+Instead of having a single Discord channel for all your GitHub repository feeds, or having a separate tech channel for each repository, you can use this worker to create a forum post for each repository and sort your GitHub activity into those forum posts individually. This way, you can have a single channel for all your GitHub activity, but still keep it organized by repository - and users can easily follow the forum posts that they are interested in.
 
 <details>
   <summary>Screenshot</summary>
@@ -17,15 +18,14 @@ A middleware designed to sort your repositories into forum posts.
   </picture>
 </details>
 
-## Usage examples
+## Setting up with Cloudflare Workers
 
-* If you have a lot of projects on your GitHub and you don't want to clog up one channel with all of it but you also don't want to create too many channels for all your repository feeds.
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/biaw/gitcord-forum)
 
-## Setting up with Workers
-
-1. [Deploy with Workers](https://deploy.workers.cloudflare.com/?url=https://github.com/biaw/gitcord-forum)
+1. Deploy to Cloudflare Workers using the button above.
 2. Insert the environment variables listed in the [`wrangler.toml`](https://github.com/biaw/gitcord-forum/blob/main/wrangler.toml) file. You can either use the `wrangler` command, or do it through the worker dashboard.
-3. Add your new worker URL (`https://gitcord-forum.WORKER_SUBDOMAIN.workers.dev/`) as a webhook in your GitHub repository settings. Make sure to set content type to `application/json` and also match the secret you set in the environment variables.
+3. Add your new worker URL (`https://gitcord-forum.WORKER_SUBDOMAIN.workers.dev/`) as a webhook in your GitHub repository settings with your preferred set of notifications to get from the repository. Make sure to set content type to `application/json` and also match the secret you set in the environment variables.
+    * You can also add this URL as a webhook for your entire GitHub organization!
 
 ## How the middleware works
 
