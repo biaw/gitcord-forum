@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      discord-api-types:
-        specifier: 0.38.16
-        version: 0.38.16
     devDependencies:
       '@cloudflare/workers-types':
         specifier: 4.20250715.0
@@ -21,6 +17,9 @@ importers:
       '@tsconfig/strictest':
         specifier: 2.0.5
         version: 2.0.5
+      discord-api-types:
+        specifier: 0.38.16
+        version: 0.38.16
       eslint:
         specifier: 9.31.0
         version: 9.31.0(jiti@1.21.7)

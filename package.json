@@ -8,13 +8,11 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "dependencies": {
-    "discord-api-types": "0.38.16"
-  },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20250715.0",
     "@octokit/webhooks-types": "7.6.1",
     "@tsconfig/strictest": "2.0.5",
+    "discord-api-types": "0.38.16",
     "eslint": "9.31.0",
     "eslint-config-promise": "github:promise/eslint-config",
     "typescript": "5.8.3",

@@ -1,6 +1,5 @@
 import type { Issue, Repository } from "@octokit/webhooks-types";
 import type { RESTPatchAPIWebhookWithTokenJSONBody, RESTPostAPIWebhookWithTokenJSONBody } from "discord-api-types/v10";
-import { ButtonStyle, ComponentType } from "discord-api-types/v10";
 
 export default async function generateForumPostFirstMessage(repository: Repository): Promise<RESTPatchAPIWebhookWithTokenJSONBody & RESTPostAPIWebhookWithTokenJSONBody> {
   const [issues, pulls] = await fetch(`${repository.url}/issues`, { headers: { "User-Agent": "biaw/gitcord-forum (promise.solutions)" } })
@@ -31,6 +30,7 @@ export default async function generateForumPostFirstMessage(repository: Reposito
           ...repository.topics.map(topic => `[\`🏷️${topic}\`](<https://github.com/topics/${topic}>)`),
           repository.homepage ? `**[${repository.homepage.replace(/^https?:\/\//u, "").replace(/\/$/u, "")}](<${repository.homepage}>)**` : "",
         ].filter(Boolean).join(" "),
+        `# [${repository.full_name}](<${repository.html_url}>)`,
         `> ${repository.description ?? "*No description provided.*"}`,
       ].join("\n"),
       issues.length ?
@@ -46,19 +46,6 @@ export default async function generateForumPostFirstMessage(repository: Reposito
         ].join("\n") :
         "",
     ].filter(Boolean).join("\n\n"),
-    components: [
-      {
-        type: ComponentType.ActionRow,
-        components: [
-          {
-            type: ComponentType.Button,
-            style: ButtonStyle.Link,
-            label: "Go to repository",
-            url: repository.html_url,
-          },
-        ],
-      },
-    ],
     // eslint-disable-next-line camelcase
     allowed_mentions: { parse: [] },
   };
