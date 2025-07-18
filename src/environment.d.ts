@@ -1,13 +1,8 @@
-import type { Repository } from "@octokit/webhooks-types";
+declare const GITHUB_WEBHOOK_SECRET: string;
+declare const DISCORD_WEBHOOK: string;
 
-declare global {
-  const GITHUB_WEBHOOK_SECRET: string;
-  const DISCORD_WEBHOOK: string;
+declare const IGNORED_USERS: string;
+declare const IGNORE_BOTS: "false" | "true";
+declare const FALLBACK_URL: string;
 
-  const IGNORED_USERS: string;
-  const IGNORE_BOTS: "false" | "true";
-  const FALLBACK_URL: string;
-
-  const DB:
-  & KVNamespace<`repository_config_${Repository["id"]}`>;
-}
+declare const DB: KVNamespace<`repository_config_${number}`>;

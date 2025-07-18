@@ -3,8 +3,8 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc -w",
-    "deploy": "wrangler publish",
-    "deploy:dry": "wrangler publish --dry-run",
+    "deploy": "wrangler deploy",
+    "deploy:dry": "wrangler deploy --dry-run",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
