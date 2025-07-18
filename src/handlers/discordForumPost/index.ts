@@ -1,18 +1,19 @@
 import type { Repository } from "@octokit/webhooks-types";
 import type { RESTError, RESTPostAPIWebhookWithTokenJSONBody, RESTPostAPIWebhookWithTokenWaitResult, Snowflake } from "discord-api-types/v10";
+import type Env from "../../environment";
 import generateForumPostFirstMessage from "./generateFirstMessage";
 
 interface RepositoryDetails { firstMessageId: Snowflake; threadId: Snowflake }
 
-export default async function getForumPostThreadIdForRepository(repository: Repository): Promise<Snowflake> {
-  const repositoryDetailsFromDatabase = await DB.get<RepositoryDetails>(`repository_config_${repository.id}`, "json");
-  if (repositoryDetailsFromDatabase) await updateForumPostForRepository(repository, repositoryDetailsFromDatabase);
+export default async function getForumPostThreadIdForRepository(repository: Repository, env: Env): Promise<Snowflake> {
+  const repositoryDetailsFromDatabase = await env.DB.get<RepositoryDetails>(`repository_config_${repository.id}`, "json");
+  if (repositoryDetailsFromDatabase) await updateForumPostForRepository(repository, env, repositoryDetailsFromDatabase);
 
-  return (repositoryDetailsFromDatabase ?? await createForumPostForRepository(repository)).threadId;
+  return (repositoryDetailsFromDatabase ?? await createForumPostForRepository(repository, env)).threadId;
 }
 
-async function createForumPostForRepository(repository: Repository): Promise<RepositoryDetails> {
-  const url = new URL(DISCORD_WEBHOOK);
+async function createForumPostForRepository(repository: Repository, env: Env): Promise<RepositoryDetails> {
+  const url = new URL(env.DISCORD_WEBHOOK);
   url.searchParams.set("wait", "true");
 
   const message: null | RESTError | RESTPostAPIWebhookWithTokenWaitResult = await fetch(url, {
@@ -32,12 +33,12 @@ async function createForumPostForRepository(repository: Repository): Promise<Rep
   const threadId = message.channel_id;
   const firstMessageId = message.id;
 
-  await DB.put(`repository_config_${repository.id}`, JSON.stringify({ threadId, firstMessageId }));
+  await env.DB.put(`repository_config_${repository.id}`, JSON.stringify({ threadId, firstMessageId }));
   return { threadId, firstMessageId };
 }
 
-async function updateForumPostForRepository(repository: Repository, { threadId, firstMessageId }: RepositoryDetails): Promise<void> {
-  const url = new URL(`${DISCORD_WEBHOOK}/messages/${firstMessageId}`);
+async function updateForumPostForRepository(repository: Repository, env: Env, { threadId, firstMessageId }: RepositoryDetails): Promise<void> {
+  const url = new URL(`${env.DISCORD_WEBHOOK}/messages/${firstMessageId}`);
   url.searchParams.set("thread_id", threadId);
 
   await fetch(url, {

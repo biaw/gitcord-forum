@@ -1,8 +1,8 @@
-declare const GITHUB_WEBHOOK_SECRET: string;
-declare const DISCORD_WEBHOOK: string;
-
-declare const IGNORED_USERS: string;
-declare const IGNORE_BOTS: "false" | "true";
-declare const FALLBACK_URL: string;
-
-declare const DB: KVNamespace<`repository_config_${number}`>;
+export default interface Env {
+  DB: KVNamespace<`repository_config_${number}`>;
+  DISCORD_WEBHOOK: string;
+  FALLBACK_URL: string;
+  GITHUB_WEBHOOK_SECRET: string;
+  IGNORE_BOTS: "false" | "true";
+  IGNORED_USERS: string;
+}

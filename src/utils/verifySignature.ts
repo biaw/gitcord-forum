@@ -1,8 +1,10 @@
+import type Env from "../environment";
+
 const algorithm = { name: "HMAC", hash: "SHA-256" } as const;
 
-export default async function verifyGithubWebhookSignature(signature: string, payload: string): Promise<boolean> {
+export default async function verifyGithubWebhookSignature(signature: string, payload: string, env: Env): Promise<boolean> {
   const enc = new TextEncoder();
-  const key = await crypto.subtle.importKey("raw", enc.encode(GITHUB_WEBHOOK_SECRET), algorithm, false, ["sign", "verify"]);
+  const key = await crypto.subtle.importKey("raw", enc.encode(env.GITHUB_WEBHOOK_SECRET), algorithm, false, ["sign", "verify"]);
   const signed = await crypto.subtle.sign(algorithm.name, key, enc.encode(payload));
 
   const expectedSignature = array2hex(signed);
