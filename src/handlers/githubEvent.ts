@@ -1,5 +1,5 @@
 import type { WebhookEvent } from "@octokit/webhooks-types";
-import { type RESTPostAPIWebhookWithTokenGitHubWaitResult, RouteBases, Routes } from "discord-api-types/v10";
+import type { RESTRateLimit } from "discord-api-types/v10";
 import type Env from "../environment";
 import getForumPostThreadIdForRepository from "./discordForumPost";
 
@@ -15,19 +15,19 @@ export default async function handleGithubEvent(data: WebhookEvent, request: Req
       method: "POST",
       headers: request.headers,
       body: JSON.stringify(await request.clone().json()),
-    })
-      .then(res => res.json<RESTPostAPIWebhookWithTokenGitHubWaitResult>())
-      .catch((error: unknown) => ({ error }));
+    });
 
-    if ("error" in response) {
-      // eslint-disable-next-line no-console
-      console.error("Failed to send Discord webhook:", response.error);
-      return new Response("Failed to send Discord webhook, see Worker logs for more information.", { status: 500 });
+    if (response.status === 429) {
+      const rateLimitData = await response.json<RESTRateLimit>();
+      return new Response(`Discord's rate limit exceeded, please try again after ${rateLimitData.retry_after} seconds.`, { status: 429, headers: response.headers });
     }
 
-    const messageUrl = new URL(RouteBases.api);
-    messageUrl.pathname = Routes.channelMessage(response.channel_id, response.id);
-    return new Response(`Discord webhook sent successfully - ${messageUrl.toString()}`, { status: 200 });
+    if (!response.ok) {
+      const error = await response.text();
+      return new Response(`Failed to send Discord webhook: ${error}`, { status: response.status, headers: response.headers });
+    }
+
+    return new Response("Discord webhook sent successfully!", { status: 200 });
   }
 
   return new Response("GitHub event ignored", { status: 202 });
