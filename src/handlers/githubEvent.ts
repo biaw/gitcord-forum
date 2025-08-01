@@ -27,7 +27,7 @@ export default async function handleGithubEvent(data: WebhookEvent, request: Req
       return new Response(`Failed to send Discord webhook: ${error}`, { status: response.status, headers: response.headers });
     }
 
-    return new Response("Discord webhook sent successfully!", { status: 200 });
+    return new Response("Discord webhook sent successfully!", { status: 200, headers: response.headers });
   }
 
   return new Response("GitHub event ignored", { status: 202 });
