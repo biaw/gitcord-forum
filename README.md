@@ -20,10 +20,14 @@ Instead of having a single Discord channel for all your GitHub repository feeds,
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/biaw/gitcord-forum)
 
-1. Deploy to Cloudflare Workers using the button above.
-2. Insert the environment variables listed in the [`wrangler.toml`](https://github.com/biaw/gitcord-forum/blob/main/wrangler.toml) file. You can either use the `wrangler` command, or do it through the worker dashboard.
+1. Deploy to Cloudflare Workers using the button above. It should be as simple as keeping all defaults, unless you want to change some predefined variables.
+2. Insert the two variable secrets, either via the Cloudflare Workers dashboard (recommended) or using the command `wrangler secret put <key>`:
+    * `GITHUB_WEBHOOK_SECRET` - your secret for webhooks (like a phrase or a word) to verify that the webhook is coming from GitHub. This needs to match the secret you set in your GitHub webhook settings.
+    * `DISCORD_WEBHOOK` - your Discord webhook link (needs to be in a forum channel!). The link should not end in `/github` as the worker will append that automatically.
 3. Add your new worker URL (`https://gitcord-forum.WORKER_SUBDOMAIN.workers.dev/`) as a webhook in your GitHub repository settings with your preferred set of notifications to get from the repository. Make sure to set content type to `application/json` and also match the secret you set in the environment variables.
     * You can also add this URL as a webhook for your entire GitHub organization!
+
+Keep in mind that the worker will simply forward the GitHub events to Discord, so you will make sure that Discord has support for the events you want to pass through. See [Discord's documentation](https://discord.com/developers/docs/resources/webhook#execute-githubcompatible-webhook) for a list of supported events. Anything more than this will simply make more requests to the worker and to Discord's API since the worker will not filter out any events, and thus might rate limit the Discord API if you do a lot of stuff at once.
 
 # How the middleware works
 
@@ -42,8 +46,8 @@ sequenceDiagram
         W->>G: 401 Unauthorized
     end
 
-    alt event is not a repository event
-        W->>G: 200 OK
+    alt event is ignored in some way, e.g. if it's not from a repository or is from a sender which is ignored
+        W->>G: 202 Accepted "GitHub event ignored"
     end
 
     W->>W: Find thread ID for repository
@@ -57,5 +61,6 @@ sequenceDiagram
     end
 
     W->>D: Forward GitHub event to new or existing forum thread
-    W->>G: 200 OK
+    D->>W: Response back from Discord including the rate limit headers
+    W->>G: Passthrough Discord's response
 ```
