@@ -5,14 +5,15 @@ import generateForumPostFirstMessage from "./generateFirstMessage";
 
 interface RepositoryDetails { firstMessageId: Snowflake; threadId: Snowflake }
 
-export default async function getForumPostThreadIdForRepository(repository: Repository, env: Env): Promise<Snowflake> {
-  const repositoryDetailsFromDatabase = await env.DB.get<RepositoryDetails>(`repository_config_${repository.id}`, "json");
-  if (repositoryDetailsFromDatabase) await updateForumPostForRepository(repository, env, repositoryDetailsFromDatabase);
-
-  return (repositoryDetailsFromDatabase ?? await createForumPostForRepository(repository, env)).threadId;
+export async function getRepositoryDetails(repository: Repository, env: Env): Promise<null | RepositoryDetails> {
+  return env.DB.get<RepositoryDetails>(`repository_config_${repository.id}`, "json");
 }
 
-async function createForumPostForRepository(repository: Repository, env: Env): Promise<RepositoryDetails> {
+export async function getOrCreateRepositoryDetails(repository: Repository, env: Env): Promise<RepositoryDetails> {
+  return await getRepositoryDetails(repository, env) ?? createForumPostForRepository(repository, env);
+}
+
+export async function createForumPostForRepository(repository: Repository, env: Env): Promise<RepositoryDetails> {
   const url = new URL(env.DISCORD_WEBHOOK);
   url.searchParams.set("wait", "true");
 
@@ -22,7 +23,7 @@ async function createForumPostForRepository(repository: Repository, env: Env): P
     body: JSON.stringify({
       // eslint-disable-next-line camelcase
       thread_name: `[${repository.owner.login}] ${repository.name}`,
-      ...await generateForumPostFirstMessage(repository),
+      ...generateForumPostFirstMessage(repository),
     } as RESTPostAPIWebhookWithTokenJSONBody),
   })
     .then(res => res.json<RESTError | RESTPostAPIWebhookWithTokenWaitResult>())
@@ -37,13 +38,13 @@ async function createForumPostForRepository(repository: Repository, env: Env): P
   return { threadId, firstMessageId };
 }
 
-async function updateForumPostForRepository(repository: Repository, env: Env, { threadId, firstMessageId }: RepositoryDetails): Promise<void> {
+export async function updateForumPostForRepository(repository: Repository, env: Env, { threadId, firstMessageId }: RepositoryDetails): Promise<void> {
   const url = new URL(`${env.DISCORD_WEBHOOK}/messages/${firstMessageId}`);
   url.searchParams.set("thread_id", threadId);
 
   await fetch(url, {
     method: "PATCH",
     headers: new Headers({ "Content-Type": "application/json" }),
-    body: JSON.stringify(await generateForumPostFirstMessage(repository)),
+    body: JSON.stringify(generateForumPostFirstMessage(repository)),
   });
 }

@@ -25,9 +25,10 @@ Instead of having a single Discord channel for all your GitHub repository feeds,
     * `GITHUB_WEBHOOK_SECRET` - your secret for webhooks (like a phrase or a word) to verify that the webhook is coming from GitHub. This needs to match the secret you set in your GitHub webhook settings.
     * `DISCORD_WEBHOOK` - your Discord webhook link (needs to be in a forum channel!). The link should not end in `/github` as the worker will append that automatically.
 3. Add your new worker URL (`https://gitcord-forum.WORKER_SUBDOMAIN.workers.dev/`) as a webhook in your GitHub repository settings with your preferred set of notifications to get from the repository. Make sure to set content type to `application/json` and also match the secret you set in the environment variables.
+    * Make sure that the `repository` event is enabled. Although not supported by Discord, it is recommended to enable updates to the first message in the forum channel.
     * You can also add this URL as a webhook for your entire GitHub organization!
 
-Keep in mind that the worker will simply forward the GitHub events to Discord, so you will make sure that Discord has support for the events you want to pass through. See [Discord's documentation](https://discord.com/developers/docs/resources/webhook#execute-githubcompatible-webhook) for a list of supported events. Anything more than this will simply make more requests to the worker and to Discord's API since the worker will not filter out any events, and thus might rate limit the Discord API if you do a lot of stuff at once.
+Keep in mind that the worker will simply forward the GitHub events to Discord, so you will make sure that Discord has support for the events you want to pass through. See [Discord's documentation](https://discord.com/developers/docs/resources/webhook#execute-githubcompatible-webhook) for a list of supported events. The worker will automatically ignore events that are not supported by Discord, and will rather use these events to update the first message in the forum channel with the latest information about the repository. We therefore recommend enabling the `repository` event in your webhook settings, so it can get infrequent updates about the repository.
 
 # How the middleware works
 
