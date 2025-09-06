@@ -12,7 +12,7 @@
     "@cloudflare/workers-types": "4.20250831.0",
     "@octokit/webhooks-types": "7.6.1",
     "@tsconfig/strictest": "2.0.5",
-    "discord-api-types": "0.38.22",
+    "discord-api-types": "0.38.23",
     "eslint": "9.34.0",
     "eslint-config-promise": "github:promise/eslint-config",
     "typescript": "5.9.2",
