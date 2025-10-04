@@ -18,8 +18,8 @@ importers:
         specifier: 2.0.6
         version: 2.0.6
       discord-api-types:
-        specifier: 0.38.26
-        version: 0.38.26
+        specifier: 0.38.27
+        version: 0.38.27
       eslint:
         specifier: 9.37.0
         version: 9.37.0(jiti@1.21.7)
@@ -796,8 +796,8 @@ packages:
   didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
 
-  discord-api-types@0.38.26:
-    resolution: {integrity: sha512-xpmPviHjIJ6dFu1eNwNDIGQ3N6qmPUUYFVAx/YZ64h7ZgPkTcKjnciD8bZe8Vbeji7yS5uYljyciunpq0J5NSw==}
+  discord-api-types@0.38.27:
+    resolution: {integrity: sha512-dyBiA01Rt5iqESQygWChUXiOt8yV4NSXJD2dBxp5YDRI8uHDMLSooxcqgNFSuCchvXtZZ64BH2ep8Wh0nV7jiQ==}
 
   dlv@1.1.3:
     resolution: {integrity: sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==}
@@ -2592,7 +2592,7 @@ snapshots:
 
   didyoumean@1.2.2: {}
 
-  discord-api-types@0.38.26: {}
+  discord-api-types@0.38.27: {}
 
   dlv@1.1.3: {}
 
