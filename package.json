@@ -13,7 +13,7 @@
     "@octokit/webhooks-types": "7.6.1",
     "@tsconfig/strictest": "2.0.7",
     "discord-api-types": "0.38.32",
-    "eslint": "9.38.0",
+    "eslint": "9.39.1",
     "eslint-config-promise": "github:promise/eslint-config",
     "typescript": "5.9.3",
     "wrangler": "4.45.3"
