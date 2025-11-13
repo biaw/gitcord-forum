@@ -11,7 +11,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "4.20251111.0",
     "@octokit/webhooks-types": "7.6.1",
-    "@tsconfig/strictest": "2.0.7",
+    "@tsconfig/strictest": "2.0.8",
     "discord-api-types": "0.38.33",
     "eslint": "9.39.1",
     "eslint-config-promise": "github:promise/eslint-config",
