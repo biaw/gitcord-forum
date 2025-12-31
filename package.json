@@ -9,7 +9,7 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20251230.0",
+    "@cloudflare/workers-types": "4.20251231.0",
     "@octokit/webhooks-types": "7.6.1",
     "@tsconfig/strictest": "2.0.8",
     "discord-api-types": "0.38.37",
