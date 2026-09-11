@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: 4.20260702.1
-        version: 4.20260702.1
+        specifier: 5.20260911.1
+        version: 5.20260911.1
       '@octokit/webhooks-types':
         specifier: 7.6.1
         version: 7.6.1
@@ -25,13 +25,13 @@ importers:
         version: 9.39.5(jiti@1.21.7)
       eslint-config-promise:
         specifier: github:promise/eslint-config
-        version: https://codeload.github.com/promise/eslint-config/tar.gz/ae041b58f06030a1f233a59eab6ea10eb5be42c6(075fcfd40298171693a993c191caa829)
+        version: https://codeload.github.com/promise/eslint-config/tar.gz/968151de2765b272a6cc5cd340fbb7629fa224cd(075fcfd40298171693a993c191caa829)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
       wrangler:
         specifier: 4.131.1
-        version: 4.131.1(@cloudflare/workers-types@4.20260702.1)
+        version: 4.131.1(@cloudflare/workers-types@5.20260911.1)
 
 packages:
 
@@ -82,8 +82,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@cloudflare/workers-types@4.20260702.1':
-    resolution: {integrity: sha512-mOhf5TUEB1m2vPrxtqoIGfz0fUC9xyxRDx5gWHy5s+OCo6dcV+g7wI1R7gYCMFohhqF/2y2xeKVwMwCJjfn/WA==}
+  '@cloudflare/workers-types@5.20260911.1':
+    resolution: {integrity: sha512-yiAvknjulcU85B3yB4aKOn9+l+garWP+AbHgsdCFckeRYDdhZ1rPULi64BDf52R3VTaKqxi47kF+o9ZbjsCt5g==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -895,8 +895,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/ae041b58f06030a1f233a59eab6ea10eb5be42c6:
-    resolution: {gitHosted: true, integrity: sha512-PeHeZDS/RzsheIIvH/htUcU9M0aWEc2x1pH8Y0Iu0Fhzo/TmS1/TDgzSJ5oKc6FdM1KVwPvSXRFy/p7/L824Ng==, tarball: https://codeload.github.com/promise/eslint-config/tar.gz/ae041b58f06030a1f233a59eab6ea10eb5be42c6}
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/968151de2765b272a6cc5cd340fbb7629fa224cd:
+    resolution: {gitHosted: true, integrity: sha512-EwY9ITzj/PSeon1pzkuSq1hIO/GVPcW7xNC/6V/HA/7LnMBJb6ex+3c8Nn0pTuX8qemGVPAOOhHP1FAcPCikWw==, tarball: https://codeload.github.com/promise/eslint-config/tar.gz/968151de2765b272a6cc5cd340fbb7629fa224cd}
     version: 0.0.0
     peerDependencies:
       '@stylistic/eslint-plugin-js': 4.2.0
@@ -1880,7 +1880,7 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20260911.1':
     optional: true
 
-  '@cloudflare/workers-types@4.20260702.1': {}
+  '@cloudflare/workers-types@5.20260911.1': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -2734,7 +2734,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/ae041b58f06030a1f233a59eab6ea10eb5be42c6(075fcfd40298171693a993c191caa829):
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/968151de2765b272a6cc5cd340fbb7629fa224cd(075fcfd40298171693a993c191caa829):
     dependencies:
       '@stylistic/eslint-plugin-js': 4.2.0(eslint@9.39.5(jiti@1.21.7))
       '@stylistic/eslint-plugin-jsx': 4.2.0(eslint@9.39.5(jiti@1.21.7))
@@ -3853,7 +3853,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20260911.1
       '@cloudflare/workerd-windows-64': 1.20260911.1
 
-  wrangler@4.131.1(@cloudflare/workers-types@4.20260702.1):
+  wrangler@4.131.1(@cloudflare/workers-types@5.20260911.1):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.5.0
       '@cloudflare/unenv-preset': 2.16.1(unenv@2.0.0-rc.24)(workerd@1.20260911.1)
@@ -3864,7 +3864,7 @@ snapshots:
       unenv: 2.0.0-rc.24
       workerd: 1.20260911.1
     optionalDependencies:
-      '@cloudflare/workers-types': 4.20260702.1
+      '@cloudflare/workers-types': 5.20260911.1
       fsevents: 2.3.3
     transitivePeerDependencies:
       - '@types/node'
