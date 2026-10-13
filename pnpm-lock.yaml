@@ -25,13 +25,13 @@ importers:
         version: 9.39.5(jiti@1.21.7)
       eslint-config-promise:
         specifier: github:promise/eslint-config
-        version: https://codeload.github.com/promise/eslint-config/tar.gz/9c97be01645c7fcb24c73f213366bca8e9fbc388(7d4de795458852d5e520a120c4e3737a)
+        version: https://codeload.github.com/promise/eslint-config/tar.gz/12a90b3cc07678c2df3969ee418683d8cec9674b(7d4de795458852d5e520a120c4e3737a)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
       wrangler:
-        specifier: 4.149.0
-        version: 4.149.0(@cloudflare/workers-types@4.20260702.1)
+        specifier: 4.150.0
+        version: 4.150.0(@cloudflare/workers-types@4.20260702.1)
 
 packages:
 
@@ -895,8 +895,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/9c97be01645c7fcb24c73f213366bca8e9fbc388:
-    resolution: {gitHosted: true, integrity: sha512-gkoq8N5R8vL2g1byQwCz2LpJW23TbP8uKoSJCaxM709xSRrcX0y1cnfBUIbmqrPQFPCjgBbihjGD8jm3caYuyA==, tarball: https://codeload.github.com/promise/eslint-config/tar.gz/9c97be01645c7fcb24c73f213366bca8e9fbc388}
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/12a90b3cc07678c2df3969ee418683d8cec9674b:
+    resolution: {gitHosted: true, integrity: sha512-w9FZmChIGuHZ1cgFd3hRuE6qz39zAD9GGuDNelPKxmiS197uRMJrkvyBs3ugek57B3/1Mhd7fN9qCs4zkYZB+Q==, tarball: https://codeload.github.com/promise/eslint-config/tar.gz/12a90b3cc07678c2df3969ee418683d8cec9674b}
     version: 0.0.0
     peerDependencies:
       '@stylistic/eslint-plugin-js': 4.2.0
@@ -1360,8 +1360,8 @@ packages:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
 
-  miniflare@5.20261006.1-alpha:
-    resolution: {integrity: sha512-6ylv8tamkrspDI2R/cAYfv+YWmfGNdXe76Pi9TauEUWsFVXn3LNF9Yk8oduzf1a+TYsSRYTqlOE7+nGGRsMHdw==}
+  miniflare@5.20261006.2-beta:
+    resolution: {integrity: sha512-agufWI3mXF8xGzry2/sOF8Im8AoYs04DWBCLDWDmd4QtMSGEo9IgrPmYOwsCmQA3K3MbLzsvr01GpWc8x3Duqw==}
     engines: {node: '>=22.0.0'}
 
   minimatch@10.2.6:
@@ -1821,8 +1821,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  wrangler@4.149.0:
-    resolution: {integrity: sha512-OzK7xmB5r5iLKb3cIT3783g13fe6T7xyeKu9LEdUyl+DKAM2KP/jkjnE0OUhyw+mB/XJM9ycjgF3MWm8PR9amg==}
+  wrangler@4.150.0:
+    resolution: {integrity: sha512-Mf3MiCoGXszX965MtKcOSe8whSyFBL2qpCp+DiSwH94+0FNYveSPQPVRRlMAMH8lkln8PECcSW1do6hnelwPZA==}
     engines: {node: '>=22.0.0'}
     hasBin: true
     peerDependencies:
@@ -2734,7 +2734,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/9c97be01645c7fcb24c73f213366bca8e9fbc388(7d4de795458852d5e520a120c4e3737a):
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/12a90b3cc07678c2df3969ee418683d8cec9674b(7d4de795458852d5e520a120c4e3737a):
     dependencies:
       '@stylistic/eslint-plugin-js': 4.2.0(eslint@9.39.5(jiti@1.21.7))
       '@stylistic/eslint-plugin-jsx': 4.2.0(eslint@9.39.5(jiti@1.21.7))
@@ -3251,7 +3251,7 @@ snapshots:
       braces: 3.0.3
       picomatch: 2.3.2
 
-  miniflare@5.20261006.1-alpha:
+  miniflare@5.20261006.2-beta:
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       sharp: 0.35.5
@@ -3853,13 +3853,13 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20261006.1
       '@cloudflare/workerd-windows-64': 1.20261006.1
 
-  wrangler@4.149.0(@cloudflare/workers-types@4.20260702.1):
+  wrangler@4.150.0(@cloudflare/workers-types@4.20260702.1):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.5.0
       '@cloudflare/unenv-preset': 2.16.2(unenv@2.0.0-rc.24)(workerd@1.20261006.1)
       blake3-wasm: 2.1.5
       esbuild: 0.28.2
-      miniflare: 5.20261006.1-alpha
+      miniflare: 5.20261006.2-beta
       path-to-regexp: 6.3.0
       unenv: 2.0.0-rc.24
       workerd: 1.20261006.1
