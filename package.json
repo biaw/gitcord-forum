@@ -5,11 +5,11 @@
     "build:watch": "tsc -w",
     "deploy": "wrangler deploy",
     "deploy:dry": "wrangler deploy --dry-run",
+    "generate-types": "wrangler types ./src/worker-configuration.d.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20260702.1",
     "@octokit/webhooks-types": "7.6.1",
     "@tsconfig/strictest": "2.0.8",
     "discord-api-types": "0.38.57",
@@ -18,5 +18,5 @@
     "typescript": "5.9.3",
     "wrangler": "4.152.0"
   },
-  "packageManager": "pnpm@10.34.7"
+  "packageManager": "pnpm@12.15.0"
 }

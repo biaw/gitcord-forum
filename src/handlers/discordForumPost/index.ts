@@ -1,5 +1,5 @@
 import type { Repository } from "@octokit/webhooks-types";
-import type { RESTError, RESTPostAPIWebhookWithTokenJSONBody, RESTPostAPIWebhookWithTokenWaitResult, Snowflake } from "discord-api-types/v10";
+import type { RESTError, RESTPostAPIWebhookWithTokenWaitResult, Snowflake } from "discord-api-types/v10";
 import type Env from "../../environment";
 import generateForumPostFirstMessage from "./generateFirstMessage";
 
@@ -24,7 +24,7 @@ export async function createForumPostForRepository(repository: Repository, env: 
       // eslint-disable-next-line camelcase
       thread_name: `[${repository.owner.login}] ${repository.name}`,
       ...generateForumPostFirstMessage(repository),
-    } as RESTPostAPIWebhookWithTokenJSONBody),
+    }),
   })
     .then(res => res.json<RESTError | RESTPostAPIWebhookWithTokenWaitResult>())
     .catch(() => null);
