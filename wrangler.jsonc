@@ -1,9 +1,10 @@
 {
-  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "gitcord-forum",
   "main": "./build/index.js",
   "workers_dev": true,
-  "compatibility_date": "2025-05-05",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["no_nodejs_compat", "no_nodejs_compat_v2"], // we do not need Node.js compatibility
   "kv_namespaces": [{ "binding": "DB", "id": "293ac4c6310245ee8b87c7a070ae24b2" }],
   "build": {
     "command": "npm run build",
@@ -11,6 +12,22 @@
   },
   "observability": {
     "enabled": true,
+    "head_sampling_rate": 1,
+    "redact_query_string": false,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true,
+      "persist": true
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true
+    },
+    "issue_detection": {
+      "enabled": true
+    }
   },
   "placement": {
     "mode": "smart",
