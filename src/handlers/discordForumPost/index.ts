@@ -1,5 +1,5 @@
 import type { Repository } from "@octokit/webhooks-types";
-import type { RESTError, RESTPostAPIWebhookWithTokenJSONBody, RESTPostAPIWebhookWithTokenWaitResult, Snowflake } from "discord-api-types/v10";
+import type { RESTError, RESTPostAPIWebhookWithTokenWaitResult, Snowflake } from "discord-api-types/v10";
 import type Env from "../../environment";
 import generateForumPostFirstMessage from "./generateFirstMessage";
 
