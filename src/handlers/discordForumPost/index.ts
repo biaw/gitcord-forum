@@ -24,7 +24,7 @@ export async function createForumPostForRepository(repository: Repository, env: 
       // eslint-disable-next-line camelcase
       thread_name: `[${repository.owner.login}] ${repository.name}`,
       ...generateForumPostFirstMessage(repository),
-    } as RESTPostAPIWebhookWithTokenJSONBody),
+    }),
   })
     .then(res => res.json<RESTError | RESTPostAPIWebhookWithTokenWaitResult>())
     .catch(() => null);
