@@ -16,7 +16,7 @@
     "eslint": "10.13.0",
     "eslint-config-promise": "github:promise/eslint-config",
     "typescript": "5.9.3",
-    "wrangler": "4.152.0"
+    "wrangler": "4.155.0"
   },
   "packageManager": "pnpm@12.15.0"
 }
