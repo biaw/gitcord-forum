@@ -15,7 +15,7 @@
     "discord-api-types": "0.38.58",
     "eslint": "10.14.0",
     "eslint-config-promise": "github:promise/eslint-config",
-    "typescript": "5.9.3",
+    "typescript": "7.0.2",
     "wrangler": "4.158.0"
   },
   "packageManager": "pnpm@12.18.0"
