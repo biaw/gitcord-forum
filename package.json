@@ -12,7 +12,7 @@
   "devDependencies": {
     "@octokit/webhooks-types": "7.6.1",
     "@tsconfig/strictest": "2.0.9",
-    "discord-api-types": "0.38.59",
+    "discord-api-types": "0.38.60",
     "eslint": "10.15.0",
     "eslint-config-promise": "github:promise/eslint-config",
     "typescript": "5.9.3",
